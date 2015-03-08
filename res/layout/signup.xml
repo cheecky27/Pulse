@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrvContent1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/red"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvSignUpHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Signup"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEditBoxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp" >
+
+            <TextView
+                android:id="@+id/tvPersonalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/personalinfo"
+                android:text="  Personal Information"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_single_bg"
+                android:drawableLeft="@drawable/name2"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColorHint="#cccccc" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvValidateName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/etUserName"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_single_bg"
+                android:drawableLeft="@drawable/username"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Username"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#cccccc" />
+
+            <TextView
+                android:id="@+id/tvValidateUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/etSignupPass"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_single_bg"
+                android:drawableLeft="@drawable/password"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="#cccccc" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvValidatePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/etName"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_single_bg"
+                android:drawableLeft="@drawable/age"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Age"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textColorHint="#cccccc" />
+
+            <TextView
+                android:id="@+id/tvValidateAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/etBday"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/etName"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_single_bg"
+                android:drawableLeft="@drawable/bday"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Birthday"
+                android:inputType="date"
+                android:textColorHint="#cccccc" />
+
+            <TextView
+                android:id="@+id/tvValidateBday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/gender"
+                android:text="Gender:"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/rdgrpGender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/tvGender"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp" >
+
+                <RadioButton
+                    android:id="@+id/rdMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:paddingRight="15dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/rdFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="27dp"
+                    android:text="Female" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvFamily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="30dp"
+                android:drawableLeft="@drawable/family"
+                android:text=" Family"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etFamName1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawableLeft="@drawable/name2"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:textColorHint="#cccccc" />
+
+            <EditText
+                android:id="@+id/etFamNum1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bottom_bg"
+                android:drawableLeft="@drawable/email"
+                android:ems="15"
+                android:gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColorHint="#cccccc" />
+
+            <EditText
+                android:id="@+id/etFamName2"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawableLeft="@drawable/name2"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:textColorHint="#cccccc" />
+
+            <EditText
+                android:id="@+id/etFamNum2"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bottom_bg"
+                android:drawableLeft="@drawable/email"
+                android:ems="15"
+                android:gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColorHint="#cccccc" />
+
+            <EditText
+                android:id="@+id/etFamName3"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawableLeft="@drawable/name2"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:textColorHint="#cccccc" />
+
+            <EditText
+                android:id="@+id/etFamNum3"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bottom_bg"
+                android:drawableLeft="@drawable/email"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColorHint="#cccccc" />
+
+            <TextView
+                android:id="@+id/tvValidateFam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvDoctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/hospital"
+                android:text="Doctor Information"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/etDocName"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_top_bg"
+                android:drawableLeft="@drawable/doctor"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:textColorHint="#cccccc" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/etDocNum"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bottom_bg"
+                android:drawableLeft="@drawable/email"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textColorHint="#cccccc" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/tvValidateDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSignUp"
+            style="@style/DefaultButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:background="@drawable/button_default_bg"
+            android:padding="10dp"
+            android:text="Watch Your Heart!" />
+    </LinearLayout>
+
+</ScrollView>

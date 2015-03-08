@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rosselle.pulsealert"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/heart"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.activity.pulsealert.SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.activity.pulsealert.Login"
+            android:label="Login"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.rosselle.pulsealert.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.activity.pulsealert.Signup"
+            android:label="Signup"
+            android:logo="@drawable/heart"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.rosselle.pulsealert.SIGNUP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.activity.pulsealert.SMSSender"
+            android:label="SMSSender"
+            android:logo="@drawable/heart"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="com.rosselle.pulsealert.SMSSENDER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.activity.pulsealert.Bluetooth"
+            android:label="Bluetooth"
+            android:theme="@style/Base.V7.Theme.AppCompat.Light" >
+            <intent-filter>
+                <action android:name="com.activity.pulsealert.BLUETOOTH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.activity.pulsealert.Home"
+            android:label="Home"
+            android:theme="@style/Base.V7.Theme.AppCompat.Light" >
+            <intent-filter>
+                <action android:name="com.rosselle.pulsealert.HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.broadcastreceiver.pulsealert.SMSReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        
+        <service android:name = "com.service.pulsealert.SRVBLUETOOTH"/>
+    </application>
+
+</manifest>
